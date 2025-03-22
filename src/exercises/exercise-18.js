@@ -16,5 +16,21 @@ Ejemplo: "Hello world"
 Nota: siempre letras minúsculas y sin tildes (para simplificar)
 */
 export function exercise18(string) {
-  // Escribe tu solución aquí
+  // start initialization counter
+  const letterCount = {};
+  /// covert string to lowercase
+  string.toLowerCase();
+  ///iterate through the the string and find
+  for (let i = 0; i < string.length; i++) {
+    // take out current char in the string
+    let char = string[i];
+    // checks if current char exists it increments
+    if (letterCount[char]) {
+      letterCount[char]++;
+      // otherwise we add it in the count
+    } else {
+      letterCount[char] = 1;
+    }
+  }
+  return letterCount;
 }

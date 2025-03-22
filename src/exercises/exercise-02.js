@@ -5,7 +5,8 @@ Muestra el siguiente mensaje dependiendo de si un número es par o impar:
 Nota: even = par | odd = impar
 */
 export function exercise02(number) {
-  // Escribe tu solución aquí
+  // declaring result as a variable // then check if the number is divisible by 2 its even otherwise its false
+  let result = number % 2 === 0 ? "even" : "odd";
 
   return `Number ${number} is ${result}`;
 }

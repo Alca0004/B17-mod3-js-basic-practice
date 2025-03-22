@@ -25,5 +25,8 @@ Agrupa en un array las peliculas por categorias:
 Pista: usa el método "groupBy" de la clase Object
 */
 export function exercise15(movies) {
-  // Escribe tu solución aquí
+  //grouping movies by category and weeding out the property from each movie
+  const groupedMovies = Object.groupBy(movies, (movie) => movie.category);
+  //// return the movies by group
+  return groupedMovies;
 }

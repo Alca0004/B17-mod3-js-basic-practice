@@ -10,7 +10,8 @@ que recibe como parámetro dos cadenas y devuelve -1 si la primera es menor que 
 0 si son iguales y 1 si la primera es mayor que la segunda.
 */
 export function exercise12(movies) {
-  // Escribe tu solución aquí
+  // extracting the titles using map, then sorting them within the map
+  return movies.map((movie) => movie.title).sort(sortStrings);
 }
 
 function sortStrings(a, b) {

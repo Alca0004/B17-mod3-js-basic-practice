@@ -6,6 +6,10 @@ que ocupa cada carácter en el abecedario. Para que sea más sencillo, elimina l
 */
 export function exercise10(string) {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  /// converting string to lowercase and remove non letter characters
+  let cleanString = string.toLowerCase().replace(/[^a-z]/g, "");
+  /// looking for the position in the alphabet
+  let positions = cleanString.split("").map((letter) => alphabet.indexOf(letter) + 1);
 
-  // Escribe tu solución aquí
+  return positions;
 }

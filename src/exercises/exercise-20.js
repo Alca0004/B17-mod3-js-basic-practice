@@ -16,9 +16,29 @@ Nota: evita llamar a la función con números altos en la versión recursiva.
 */
 
 export function exercise20(n) {
-  // Escribe tu solución aquí
+  // Base case: Fib(0) is 0
+  if (n === 0) return 0;
+  // Base case: Fib(1) is 1
+  if (n === 1) return 1;
+
+  return exercise20(n - 1) + exercise20(n - 2);
 }
 
 export function exercise20Iterative(n) {
-  // Escribe tu solución aquí
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  // Starting Fib(0)
+  let prev = 0;
+  // Starting Fib(1)
+  let current = 1;
+
+  // This loop finds the next numbers until Fib(n)
+  for (let i = 2; i <= n; i++) {
+    // Adds the previous two numbers
+    const next = prev + current;
+    // Move to the next number
+    prev = current;
+    // Move to the next number
+    current = next;
+  }
 }
