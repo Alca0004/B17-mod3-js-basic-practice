@@ -41,4 +41,5 @@ export function exercise20Iterative(n) {
     // Move to the next number
     current = next;
   }
+  return current;
 }

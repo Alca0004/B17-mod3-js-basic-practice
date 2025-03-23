@@ -8,14 +8,15 @@ Ejemplos:
 "the string 'hello world' is not an isogram"
 */
 export function exercise19(string) {
-  // normalize string by removing spaces and making everything lowercase
+  // normalize string by removing spaces and turn everything lowercase
   const normalizedString = string.replace(/\s+/g, "").toLowerCase();
 
-  // count ocurrences in each letter
+  // count ocurrences in each letter by calling the function
   const countLetters = lettersOccurrences(normalizedString);
 
-  // checking if all counts are equal
+  // check if all counts are equal
   const values = Object.values(countLetters);
+  ///checking if the count is equal to the first count
   const isIsogram = values.every((val) => val === values[0]);
 
   return `the string '${string}' is ${isIsogram ? "" : "not "}an isogram`;

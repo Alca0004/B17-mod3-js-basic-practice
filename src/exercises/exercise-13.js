@@ -11,7 +11,7 @@ export function exercise13(movies) {
   const averageRating = totalRatings / movies.length;
   //filter movies with rating above the average
   const bestMovies = movies.filter((movie) => movie.rating > averageRating);
-  // sort them from highest to lowest
+  // sort the best movie from highest to lowest
   bestMovies.sort((a, b) => b.rating - a.rating);
 
   // return the array with only title and description
